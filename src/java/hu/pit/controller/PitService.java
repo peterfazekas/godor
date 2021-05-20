@@ -116,11 +116,13 @@ public class PitService {
         for (int i = 0; i < pos; i++) {
             if (pit.get(i) > pit.get(i + 1)) {
                 monotonous = false;
+                break;
             }
         }
         for (int i = pos; i < pit.size() - 1; i++) {
             if (pit.get(i) < pit.get(i + 1)) {
                 monotonous = false;
+                break;
             }
         }
         return monotonous;
